@@ -1,8 +1,8 @@
 {
   "smtp_server": "smtp.gmail.com",
   "smtp_port": 587,
-  "smtp_username": "your_email@gmail.com",
-  "smtp_password": "your_app_password",
-  "from_email": "your_email@gmail.com",
-  "from_name": "SoundScribe Agent"
+  "smtp_username": "linj92813@gmail.com",
+  "smtp_password": "afir lvad ibcu whzn",
+  "from_email": "linj92813@gmail.com",
+  "from_name": "SoundScribe PM"
 }
