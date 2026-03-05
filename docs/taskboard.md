@@ -1,6 +1,6 @@
 # SoundScribe 任务看板
 
-> 最后更新: 2026-03-05
+> 最后更新: 2026-03-05 14:00
 
 ## MVP 任务列表
 
@@ -9,7 +9,7 @@
 | 任务ID | 任务名 | 负责Agent | 状态 | 截止日 | 备注 |
 |--------|--------|-----------|------|--------|------|
 | T001 | 项目初始化(仓库/结构) | PM | ✅ Done | 03/05 | |
-| T002 | 技术方案设计 | Backend | 🔄 In Progress | 03/07 | Flutter架构 |
+| T002 | 技术方案设计 | Backend | ✅ Done | 03/05 | Flutter架构 |
 | T003 | UI 原型设计 | Frontend | 🔄 In Progress | 03/07 | 页面规划 |
 | T004 | 测试计划编写 | QA | 🔄 In Progress | 03/07 | |
 
@@ -17,10 +17,10 @@
 
 | 任务ID | 任务名 | 负责Agent | 状态 | 截止日 | 备注 |
 |--------|--------|-----------|------|--------|------|
-| T005 | Flutter 项目创建 | Backend | ⏳ Pending | 03/10 | |
-| T006 | 麦克风录音功能 | Frontend | ⏳ Pending | 03/12 | |
+| T005 | Flutter 项目创建 | Backend | ✅ Done | 03/05 | |
+| T006 | 麦克风录音功能 | Frontend | 🔄 In Progress | 03/12 | |
 | T007 | 音频保存逻辑 | Backend | ⏳ Pending | 03/12 | |
-| T008 | 首页 UI 开发 | Frontend | ⏳ Pending | 03/12 | |
+| T008 | 首页 UI 开发 | Frontend | ✅ Done | 03/05 | |
 
 ### Week 3: AI 集成
 
@@ -28,8 +28,8 @@
 |--------|--------|-----------|------|--------|------|
 | T009 | Melody.ml API 集成 | Backend | ⏳ Pending | 03/17 | |
 | T010 | 扒谱结果解析 | Backend | ⏳ Pending | 03/17 | |
-| T011 | PDF 生成功能 | Backend | ⏳ Pending | 03/19 | |
-| T012 | 结果页 UI | Frontend | ⏳ Pending | 03/19 | |
+| T011 | PDF 生成功能 | Backend | ✅ Done | 03/05 | |
+| T012 | 结果页 UI | Frontend | ✅ Done | 03/05 | |
 
 ### Week 4: 测试与发布
 
@@ -57,6 +57,9 @@
 ## 本周进度汇总 (03/05)
 
 - ✅ 项目启动
-- 🔄 技术方案设计中
-- 🔄 UI 原型设计中
+- ✅ 技术方案设计完成
+- ✅ Flutter 项目结构创建
+- ✅ 首页/录音页/结果页/设置页 UI 完成
+- ✅ PDF 生成功能
+- 🔄 麦克风录音功能开发中
 - 🔄 测试计划编写中
