@@ -1,0 +1,27 @@
+# Secrets
+docs/github_config.json
+docs/email_config.json
+
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+flutter_*.png
+
+# Build
+build/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Lock files (optional - can cause conflicts)
+# pubspec.lock

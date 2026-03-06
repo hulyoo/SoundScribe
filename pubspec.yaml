@@ -1,0 +1,47 @@
+name: soundscribe
+description: AI-powered music transcription app that converts audio to sheet music.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.0.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  provider: ^6.1.1
+  riverpod: ^2.4.9
+
+  # Audio Recording
+  record: ^5.0.4
+  permission_handler: ^11.1.0
+
+  # HTTP & API
+  dio: ^5.3.3
+
+  # Storage
+  path_provider: ^2.1.1
+  shared_preferences: ^2.2.2
+
+  # PDF Generation
+  pdf: ^3.10.7
+  printing: ^5.11.1
+
+  # UI Components
+  cupertino_icons: ^1.0.6
+
+  # Utilities
+  uuid: ^4.2.1
+  intl: ^0.18.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  mockito: ^5.4.4
+  build_runner: ^2.4.7
+
+flutter:
+  uses-material-design: true
