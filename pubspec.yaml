@@ -15,7 +15,7 @@ dependencies:
   riverpod: ^2.4.9
 
   # Audio Recording
-  record: ^5.0.4
+  record: ^6.0.0
   permission_handler: ^11.1.0
 
   # HTTP & API

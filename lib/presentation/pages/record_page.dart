@@ -126,6 +126,30 @@ class _RecordPageState extends State<RecordPage> {
 
   Future<void> _processAudio() async {
     try {
+      // Validate audio file exists and has content
+      final audioFile = File(_audioPath!);
+      if (!await audioFile.exists()) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Audio file not found')),
+          );
+        }
+        return;
+      }
+
+      final fileSize = await audioFile.length();
+      if (fileSize < 1000) { // Less than 1KB is likely empty/invalid
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('No audio detected. Please record again.')),
+          );
+          setState(() {
+            _isProcessing = false;
+          });
+        }
+        return;
+      }
+
       // Get API key from settings
       final prefs = await SharedPreferences.getInstance();
       final apiKey = prefs.getString(AppConstants.keyApiKey) ?? '';
@@ -134,11 +158,12 @@ class _RecordPageState extends State<RecordPage> {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
-              content: Text('Please configure Melody.ml API key in Settings'),
+              content: Text('Please configure Melody.ml API key in Settings first'),
             ),
           );
-          // Use mock data for demo
-          await _navigateToResult(_createMockResult());
+          setState(() {
+            _isProcessing = false;
+          });
         }
         return;
       }
@@ -151,12 +176,13 @@ class _RecordPageState extends State<RecordPage> {
         await _navigateToResult(result);
       }
     } catch (e) {
-      // If API fails, use mock data for demo
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('API Error: $e. Using demo data.')),
+          SnackBar(content: Text('Transcription failed: $e')),
         );
-        await _navigateToResult(_createMockResult());
+        setState(() {
+          _isProcessing = false;
+        });
       }
     }
   }

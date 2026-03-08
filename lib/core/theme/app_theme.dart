@@ -8,8 +8,8 @@ class AppTheme {
   static const Color accentColor = Color(0xFFEC4899);
 
   static ThemeData get lightTheme {
-         useMaterial3 return ThemeData(
-: true,
+    return ThemeData(
+      useMaterial3: true,
       colorScheme: ColorScheme.fromSeed(
         seedColor: primaryColor,
         brightness: Brightness.light,
@@ -18,7 +18,7 @@ class AppTheme {
         centerTitle: true,
         elevation: 0,
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         elevation: 2,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
@@ -49,7 +49,7 @@ class AppTheme {
         centerTitle: true,
         elevation: 0,
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         elevation: 2,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
